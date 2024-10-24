@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .header a{
+      padding: 20px 30px;
+      float: left;
+    }
+    * {
+   box-sizing: border-box;
+  }
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px;
+      align-content: center;
+    }
+    #cards div{
+      flex: 1 1;
+    }
+    .img1{
+      width: 736px;
+    }
+    .card1{
+      margin-left: 10px;
+      border: 1px;
+      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    }
+    .card2{
+      margin-left: 10px;
+      padding-left: 10px;
+      border: 1px;
+      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+      
+    }
+   
+    .price{
+      color: rgb(109, 107, 107);
+    }
+  </style>
+</head>
+<body>
+  <!-- <div class="header">
+    <a href="#index" class="logo">sneakers</a>
+    <a href="collections">Collections</a>
+    <a href="men">Men</a>
+    <a href="women">Women</a>
+    <a href="about">About</a>
+    <a href="contact">Contact</a>
+  </div><br><br><br> -->
+  <div id="cards">
+    <div class="card1">
+      <img src="images/shoe-1.jpg" alt="Shoe 1" class="img1">
+    </div>
+    <div class="card2">
+      <p>
+        SNEAKER COMPANY
+      </p>
+     <h4>Fall Limited Edition Sneakers</h4>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <p>
+          <b>$125.00</b>
+          50%
+        </p>
+        <p class="price">
+          <s>$250.00</s>
+        </p>
+        <p>
+          <button type="button">0</button>
+          <button>Add to cart</button>
+       </p>
+    </div>
+  </div><br><br><br><br>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Victor</a>.
+  </div>
+</body>
+</html>
