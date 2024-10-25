@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+    background-color: peru;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    body {
+    background-color: yellowgreen;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+}
+
+.nav-icons img {
+    width: 24px;
+    margin-left: 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.product-images {
+    flex: 1;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumbnails {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 60px;
+    margin-right: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnails img:hover {
+    border-color: orange;
+}
+
+.product-details {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.product-details h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.price {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.current-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.discount {
+    margin-left: 10px;
+    color: white;
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.original-price {
+    margin-left: 20px;
+    text-decoration: line-through;
+    color: #888;
+}
+
+.quantity-cart {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.quantity-selector button {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.quantity-selector input {
+    width: 40px;
+    text-align: center;
+    border: none;
+}
+
+.add-to-cart {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">sneakers</div>
+        <ul class="nav-links">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="#"><img src="images/icon-cart.svg" alt="Cart"></a>
+            <a href="#"><img src="images/image-avatar.png" alt="Avatar"></a>
+        </div>
+    </nav>
+
+    <!-- Main Product Section -->
+    <main class="product-container">
+        <div class="product-images">
+            <img class="main-image" src="images/shoe-1.jpg" alt="Product Image">
+            <div class="thumbnails">
+                <img src="images/shoe-1-thumbnail.jpg" alt="Thumbnail 1">
+                <img src="images/shoe-2-thumbnail.jpg" alt="Thumbnail 2">
+                <img src="images/shoe-3-thumbnail.jpg" alt="Thumbnail 3">
+                <img src="images/shoe-4-thumbnail.jpg" alt="Thumbnail 4">
+            </div>
+        </div>
+        <div class="product-details">
+            <h2>SNEAKER COMPANY</h2>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            <div class="price">
+                <span class="current-price">$125.00</span>
+                <span class="discount">50%</span>
+                <span class="original-price">$250.00</span>
+            </div>
+            <div class="quantity-cart">
+                <div class="quantity-selector">
+                    <button class="minus">-</button>
+                    <input type="number" value="0" min="0">
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

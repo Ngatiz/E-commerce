@@ -3,84 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
-
+  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-    .header a{
+    body {
+      background-color: tan;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+  
+    * {
+        box-sizing: border-box;
+      }
+  
+    @media screen and (max-width: 992px) {
+      body {
+      background-color: peru;
+      }
+    }
+  
+    @media screen and (max-width: 600px) {
+      body {
+      background-color: yellowgreen;
+      }
+    }
+  
+    .navbar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width:100%;
+    }
+
+    .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    }
+  
+    .menu{
+      display: flex;
+      justify-content: center;
+    }
+  
+    .icons{
+      display: flex;
+      align-items: center;
+    }
+  
+    .icons img{
+      width: 30px;
+      
+    }
+  
+    .navbar a{
       padding: 20px 30px;
+      overflow: hidden;
+    }
+  
+    .navbar ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .navbar ul li {
       float: left;
     }
-    * {
-   box-sizing: border-box;
-  }
+  
+    .navbar ul li a{
+      color: black;
+      display: block;
+      text-align: center;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+  
+    
     #cards {
       display: flex;
       flex-wrap: wrap;
       border: 1px;
       align-content: center;
     }
+  
     #cards div{
       flex: 1 1;
+      margin-left: 10px;
+      border: 1px;
+      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     }
+  
     .img1{
       width: 736px;
     }
-    .card1{
-      margin-left: 10px;
-      border: 1px;
-      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-    }
+  
     .card2{
-      margin-left: 10px;
       padding-left: 10px;
-      border: 1px;
-      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-      
     }
-   
+  
     .price{
       color: rgb(109, 107, 107);
     }
+
+    .quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
   </style>
 </head>
 <body>
-  <!-- <div class="header">
-    <a href="#index" class="logo">sneakers</a>
-    <a href="collections">Collections</a>
-    <a href="men">Men</a>
-    <a href="women">Women</a>
-    <a href="about">About</a>
-    <a href="contact">Contact</a>
-  </div><br><br><br> -->
+  <nav class="navbar">
+    <div class="logo">sneakers</div>
+    <ul class="menu">
+        <li><a href="collections">Collections</a></li>
+        <li><a href="men">Men</a></li>
+        <li><a href="women">Women</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+    </ul>
+    <div class="icons">
+        <a href=""><img src="images/icon-cart.svg" alt="Logo"></a>
+        <a href=""><img src="images/image-avatar.png" alt="Avatar"></a>
+    </div>
+  </nav>
+
   <div id="cards">
     <div class="card1">
       <img src="images/shoe-1.jpg" alt="Shoe 1" class="img1">
     </div>
     <div class="card2">
-      <p>
-        SNEAKER COMPANY
-      </p>
-     <h4>Fall Limited Edition Sneakers</h4>
-        <p>
-          These low-profile sneakers are your perfect casual wear companion. Featuring a 
-          durable rubber outer sole, they’ll withstand everything the weather can offer.
-        </p>
-        <p>
-          <b>$125.00</b>
+        <h2>SNEAKER COMPANY</h2>
+        <h3>Fall Limited Edition Sneakers</h3>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <p><b>$125.00</b>
           50%
         </p>
+       
         <p class="price">
           <s>$250.00</s>
         </p>
         <p>
-          <button type="button">0</button>
-          <button>Add to cart</button>
+          <div class="quantity-selector">
+            <button class="minus">-</button>
+            <input type="number" value="0" min="0">
+            <button class="plus">+</button>
+        </div>
+            <button class="add-to-cart">Add to cart</button>
        </p>
     </div>
   </div><br><br><br><br>
