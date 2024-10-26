@@ -90,27 +90,61 @@
     #cards {
       display: flex;
       flex-wrap: wrap;
-      border: 1px;
+      border: none;
       align-content: center;
     }
   
     #cards div{
       flex: 1 1;
       margin-left: 10px;
-      border: 1px;
-      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+      border: none;
+      /* box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3); */
     }
-  
-    .img1{
-      width: 736px;
+
+    .main-image {
+    width: 100%;
+    border-radius: 10px;
     }
-  
+    
+    .thumbnails {
+        display: flex;
+        margin-top: 10px;
+    }
+    
+    .thumbnails img {
+        width: 60px;
+        margin-right: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+    
+    .thumbnails img:hover {
+        border-color: orange;
+    }
+
     .card2{
       padding-left: 10px;
     }
   
-    .price{
-      color: rgb(109, 107, 107);
+    .current-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    }
+
+    .discount {
+        margin-left: 10px;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    .original-price {
+        margin-left: 20px;
+        text-decoration: line-through;
+        color: #888;
     }
 
     .quantity-selector {
@@ -120,7 +154,29 @@
     border-radius: 10px;
     padding: 5px;
     margin-right: 20px;
-}
+    }
+
+    .quantity-selector input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    }
+
+    .minus, .plus{
+      color: orange;
+      
+    }
+    
+    .add-to-cart{
+      background-color: orange;
+      color: black;
+      border: none;
+      margin-left: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: auto;
+    }
 
   </style>
 </head>
@@ -142,26 +198,30 @@
 
   <div id="cards">
     <div class="card1">
-      <img src="images/shoe-1.jpg" alt="Shoe 1" class="img1">
+      <img class="main-image" src="images/shoe-1.jpg" alt="Product Image">
+      <div class="thumbnails">
+          <img src="images/shoe-1-thumbnail.jpg" alt="Thumbnail 1">
+          <img src="images/shoe-2-thumbnail.jpg" alt="Thumbnail 2">
+          <img src="images/shoe-3-thumbnail.jpg" alt="Thumbnail 3">
+          <img src="images/shoe-4-thumbnail.jpg" alt="Thumbnail 4">
+      </div>
     </div>
     <div class="card2">
         <h2>SNEAKER COMPANY</h2>
         <h3>Fall Limited Edition Sneakers</h3>
         <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-        <p><b>$125.00</b>
-          50%
-        </p>
-       
-        <p class="price">
-          <s>$250.00</s>
-        </p>
+        <div class="price">
+                <span class="current-price">$125.00</span>
+                <span class="discount">50%</span><br><br>
+                <span class="original-price">$250.00</span>
+        </div>
         <p>
           <div class="quantity-selector">
             <button class="minus">-</button>
             <input type="number" value="0" min="0">
             <button class="plus">+</button>
-        </div>
             <button class="add-to-cart">Add to cart</button>
+          </div>
        </p>
     </div>
   </div><br><br><br><br>
