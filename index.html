@@ -39,7 +39,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width:100%;
+      width: 100%;
     }
 
     .logo {
@@ -92,6 +92,8 @@
       flex-wrap: wrap;
       border: none;
       align-content: center;
+      margin: 30px auto;
+      max-width: 1200px;
     }
   
     #cards div{
@@ -147,6 +149,12 @@
         color: #888;
     }
 
+    .quantity-cart {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
     .quantity-selector {
     display: flex;
     align-items: center;
@@ -191,7 +199,7 @@
         <li><a href="contact">Contact</a></li>
     </ul>
     <div class="icons">
-        <a href=""><img src="images/icon-cart.svg" alt="Logo"></a>
+        <a href="cart"><img src="images/icon-cart.svg" alt="Logo"></a>
         <a href=""><img src="images/image-avatar.png" alt="Avatar"></a>
     </div>
   </nav>
@@ -215,14 +223,14 @@
                 <span class="discount">50%</span><br><br>
                 <span class="original-price">$250.00</span>
         </div>
-        <p>
+        <div class="quantity-cart">
           <div class="quantity-selector">
-            <button class="minus">-</button>
-            <input type="number" value="0" min="0">
-            <button class="plus">+</button>
-            <button class="add-to-cart">Add to cart</button>
+              <button class="minus">-</button>
+              <input type="number" value="0" min="0">
+              <button class="plus">+</button>
           </div>
-       </p>
+          <button class="add-to-cart">Add to cart</button>
+      </div>
     </div>
   </div><br><br><br><br>
   <div class="attribution">
